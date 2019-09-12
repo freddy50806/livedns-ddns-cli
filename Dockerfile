@@ -1,5 +1,5 @@
 FROM golang:1.13
-MAINTAINER GTB
+LABEL maintainer="gtb.coding@gmail.com"
 
 ADD . /opt/livedns-ddns-cli/
 WORKDIR /opt/livedns-ddns-cli/
