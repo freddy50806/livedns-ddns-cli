@@ -86,7 +86,9 @@ func main() {
 			if IP != ipAddress {
 				IP = ipAddress
 			}
-			updateDNS()
+			if err := updateDNS(); err != nil {
+				log.Println(err)
+			}
 		}
 		time.Sleep(Config.Duration)
 	}
